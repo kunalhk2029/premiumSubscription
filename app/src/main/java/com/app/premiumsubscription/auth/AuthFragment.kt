@@ -30,8 +30,6 @@ class AuthFragment : Fragment() {
     lateinit var firebaseAuth: FirebaseAuth
     private var _binding: FragmentFirstBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onAttach(context: Context) {
