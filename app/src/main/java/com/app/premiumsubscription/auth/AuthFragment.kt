@@ -45,8 +45,7 @@ class AuthFragment : Fragment() {
     }
 
     private fun handleSignInResult(task: Task<GoogleSignInAccount>) {
-        try
-        {
+        try{
             val account =  task.getResult(ApiException::class.java)!!
             Log.d("ID=","firebaseAuthWithGoogle"+account.id)
             firebaseAuthWithGoogle(account.idToken!!)
