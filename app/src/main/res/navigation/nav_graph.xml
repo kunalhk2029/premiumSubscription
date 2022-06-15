@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="Sign-In"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.app.premiumsubscription.auth.AuthFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment"
+            app:popUpTo="@id/FirstFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.app.premiumsubscription.products.ProductFragment"
+        android:label="Happy Shopping"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_SecondFragment_to_premiumSubscriptionDetailFragment"
+            app:destination="@id/premiumSubscriptionDetailFragment"
+            app:popUpTo="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_vouchersDetailFragment"
+            app:destination="@id/vouchersDetailFragment"
+            app:popUpTo="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vouchersDetailFragment"
+        android:name="com.app.premiumsubscription.voucherDetailScreen.VouchersDetailFragment"
+        android:label="Voucher"
+        tools:layout="@layout/fragment_vouchers_detail" />
+    <fragment
+        android:id="@+id/premiumSubscriptionDetailFragment"
+        android:name="com.app.premiumsubscription.premiumDetailScreen.PremiumSubscriptionDetailFragment"
+        android:label="Premium Subscription"
+        tools:layout="@layout/fragment_premium_subscription_detail" />
+</navigation>

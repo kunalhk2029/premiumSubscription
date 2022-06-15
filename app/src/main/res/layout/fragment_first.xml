@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".auth.AuthFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_undraw_mobile_login_re_9ntv"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signinbt"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="15dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/textview_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="#6c63ff"
+            android:padding="20dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/signinbt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:progressTintMode="add"
+        android:visibility="gone"
+        android:indeterminateTint="#6c63ff"
+        android:id="@+id/pb"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
